@@ -1,7 +1,10 @@
 package TP3_4;
 //import java.util.ArrayList;
 
+import java.util.ArrayList;
+
 import in.keyboard.Keyboard;
+
 
 public class Main {
 
@@ -37,6 +40,10 @@ public class Main {
                 case 5:
                     TeamRocket.TexteEquipeComplete();
                     break;
+				/*case 6:
+
+					InfoArtefacts(map.listArtefact());
+					break;*/
 
                 default:
                     System.out.println("Votre choix n'est pas valide");
@@ -57,6 +64,7 @@ public class Main {
         System.out.println("Si vous voulez avoir des informations sur un aventurier, choississez 3");
         System.out.println("Si vous voulez enlever un aventurier dans une equipe, choisissez 4");
         System.out.println("Si vous voulez savoir si l'�quipe est compl�te, choisissez 5");
+        System.out.println("Si vous voulez des informations sur les art�facts, choisissez 6");
         int choix = Keyboard.getInt();
         return choix;
     }
@@ -113,4 +121,13 @@ public class Main {
         String nomAventurier = GetAventurierNom();
         System.out.println("nom: " + e.renvoisAventurier(nomAventurier).nom + " Role: " + e.renvoisAventurier(nomAventurier).role + " Coordonn�es: " + e.renvoisAventurier(nomAventurier).coordonnees);
     }
+
+    public static void InfoArtefacts(ArrayList<Artefact> lst) {
+        for (Artefact a : lst) {
+            System.out.println(a.toString());
+        }
+    }
+
+
+
 }
