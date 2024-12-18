@@ -4,29 +4,26 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 
-
 public class Map {
-    private int[][] map;
-    //private ArrayList<Artefact> artefact;
-
+    protected int[][] map;
+    protected ArrayList<Artefact> artefact;
 
     public Map(int[][] map) {
         this.map = map;
-        //this.artefact = listArtefact();
+        this.artefact = creeListeArtefact();
     }
 
     public String afficherMap(Equipe equipe) {
         String carte = "    a    b    c    d    e    f    g    h \n";
         String[] indice = {"a ", "b ", "c ", "d ", "e ", "f ", "g ", "h "};
-        ArrayList<Artefact> artefact =  listArtefact(map);
         for (int i=0; i<map.length; i++) {
             carte += indice[i];
             for (int j=0; j<map[i].length; j++) {
                 if (estPresentAventurier(map, equipe, i, j) != "") {
                     carte += "{ " + estPresentAventurier(map, equipe, i, j) + " }";
                 }
-                else if (estPresentArtefact(map,i,j,artefact) != "") {
-                    carte += "{" + estPresentArtefact(map, i, j, artefact) + "}";
+                else if (estPresentArtefact(map,i,j) != "") {
+                    carte += "{" + estPresentArtefact(map, i, j) + "}";
                 }
                 else if (map[i][j] == 0) {
                     carte += "{   }";
@@ -65,7 +62,7 @@ public class Map {
         return res;
     }
 
-    public static String estPresentArtefact(int[][] map, int i, int j, ArrayList<Artefact> artefact) {
+    public String estPresentArtefact(int[][] map, int i, int j) {
         char[] indice = {'a','b','c','d','e','f','g','h'};
         char longitude = indice[i];
         char latitude = indice[j];
@@ -75,17 +72,66 @@ public class Map {
             char longitude_a = a.getCoordonnees().charAt(1);
             char latitude_a = a.getCoordonnees().charAt(3);
             if (longitude == longitude_a && latitude == latitude_a) {
-                if(a.getNom() == "le lemming de vetea") {
-                    res = "("+map[i][j]+")";;
+                if(a.getNom().equals("le lemming de vetea")) {
+                    if (a.estDisponible){
+                        res = "A " + map[i][j];
+                    }
                 }
-                else if(a.getNom() == "le grimoire des tenebres") {
-                    res = "("+map[i][j]+")";;
+                else if(a.getNom().equals("le grimoire des tenebres")) {
+                    if (a.estDisponible){
+                        res = "A " + map[i][j];
+                    }
                 }
+                else if(a.getNom().equals("Bibelot")) {
+                    if (a.estDisponible) {
+                        res = "A " + map[i][j];
+                    }
+                }
+                else if(a.getNom().equals("magic partiel")) {
+                    if (a.estDisponible){
+                        res = "A " + map[i][j];
+                    }
+                }
+
             }}
         return res;
     }
 
-    public static ArrayList<Integer> PointCulminant(int[][] map){
+    public boolean estPresentUnArtefact(char i, char j) {
+        char longitude = i;
+        char latitude = j;
+        boolean res = false;
+
+        for (Artefact a : artefact) {
+            char longitude_a = a.getCoordonnees().charAt(1);
+            char latitude_a = a.getCoordonnees().charAt(3);
+            if (longitude == longitude_a && latitude == latitude_a) {
+                if(a.getNom().equals("le lemming de vetea")) {
+                    if (a.estDisponible){
+                        res = true;
+                    }
+                }
+                else if(a.getNom().equals("le grimoire des tenebres")) {
+                    if (a.estDisponible){
+                        res = true;
+                    }
+                }
+                else if(a.getNom().equals("Bibelot")) {
+                    if (a.estDisponible) {
+                        res = true;
+                    }
+                }
+                else if(a.getNom().equals("magic partiel")) {
+                    if (a.estDisponible){
+                        res = true;
+                    }
+                }
+
+            }}
+        return res;
+    }
+
+    public ArrayList<Integer> PointCulminant(){
         ArrayList<Integer> point = new ArrayList<Integer>();
 
         for (int i=0; i<map.length; i++) {
@@ -99,50 +145,25 @@ public class Map {
         return point;
     }
 
-
-    public static ArrayList<Artefact> listArtefact(int[][] map){
-        ArrayList<Artefact> lst = new ArrayList<Artefact>();
-
-        Artefact a1 = new  Artefact("le lemming de vetea",15);
-        Artefact a2 = new Artefact("le grimoire des tenebres",1);
-
-        ArrayList<Integer> coordPossible = PointCulminant(map);
-
+    private ArrayList<Artefact> ajoutArtefact(ArrayList<Integer> coordonneesDispo, ArrayList<Artefact> liste, Integer x, Integer y, String nom, Integer poids){
         char[] indice = {'a','b','c','d','e','f','g','h'};
-        int longitudeA1 = 0;
-        int latitudeA1 = 0;
-        int longitudeA2 = 0;
-        int latitudeA2 = 0;
-
-
-        for(int i=0; i<indice.length; i++) {
-            if (a1.getCoordonnees().charAt(1) == indice[i]) {
-                longitudeA1 = i;
-            }else if (a1.getCoordonnees().charAt(3) == indice[i]) {
-                latitudeA1 = i;
-            }else if (a2.getCoordonnees().charAt(1) == indice[i]) {
-                longitudeA2 = i;
-            }else if (a2.getCoordonnees().charAt(3) == indice[i]) {
-                latitudeA2 = i;
-            }
-        }
-        System.out.println(longitudeA1);
-        System.out.println(latitudeA1);
-        System.out.println(longitudeA2);
-        System.out.println(latitudeA2);
-
-        for (int k=0; k<coordPossible.size(); k+=2) {
-            if ( coordPossible.get(k) == longitudeA1 && coordPossible.get(k+1) == latitudeA1) {
-                lst.add(a1);
-                k+=2;
-            }
-            if ( coordPossible.get(k) == longitudeA2 && coordPossible.get(k+1) == latitudeA2) {
-                lst.add(a2);
-                k+=2;
-            }
-
-        }
-        return lst;
+        String coordArt1 = "(" + indice[coordonneesDispo.get(x)] + "," + indice[coordonneesDispo.get(y)] + ")";
+        Artefact art1 = new Artefact(nom, poids, coordArt1);
+        liste.add(art1);
+        return liste;
     }
+
+    public ArrayList<Artefact> creeListeArtefact(){
+        ArrayList<Artefact> liste = new ArrayList<>();
+        ArrayList<Integer> coordonneesDispo = PointCulminant();
+        char[] indice = {'a','b','c','d','e','f','g','h'};
+
+        liste = ajoutArtefact(coordonneesDispo, liste, 0, 1, "Bibelot", 10);
+        liste = ajoutArtefact(coordonneesDispo, liste, 2, 3, "le lemming de vetea", 15);
+        liste = ajoutArtefact(coordonneesDispo, liste, 4, 5, "le grimoire des tenebres", 1);
+        liste = ajoutArtefact(coordonneesDispo, liste, 6, 7, "magic partiel", 5);
+        return liste;
+    }
+
 }
 

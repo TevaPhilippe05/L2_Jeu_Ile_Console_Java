@@ -46,7 +46,7 @@ public class Equipe{
         return reponse;
     }
 
-    public void TexteEquipeComplete() {
+    public void texteEquipeComplete() {
         if (nbAventurier == 3) {
             System.out.println("L'�quipe est compl�te");
         }
@@ -85,7 +85,9 @@ public class Equipe{
         return res;
     }
 
-
+    public int getNbAventurier(){
+        return nbAventurier;
+    }
 
 
 }

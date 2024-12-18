@@ -7,24 +7,23 @@ public class Artefact {
     private int poids;
     private String nom;
     private String coordonnees;
-    private boolean estDisponible;
+    protected boolean estDisponible;
 
-    public Artefact(String nom, int poids) {
-        this.nom=nom;
+    public Artefact(String nom, int poids, String coordonnee) {
+        this.nom = nom;
         this.poids = poids;
-        this.coordonnees = coordonneesAleatoire();
+        this.coordonnees = coordonnee;
         this.estDisponible = true;
     }
 
-    public String coordonneesAleatoire() {
+    // Pas possible car il faut prendre en compte la map.
+    /*public String coordonneesAleatoire() {
         Random rand = new Random();
         char longitude = (char)(rand.nextInt(8) + 97);
         char latitude = (char)(rand.nextInt(8) + 97);
 
         return"("+longitude+","+latitude+")";
-    }
-
-
+    }*/
 
     public String getCoordonnees() {
         return coordonnees;
@@ -41,5 +40,5 @@ public class Artefact {
 }
 
 
-//todo :  + Coordonnee aleatoire pour aventurier +modifier dans
-//artefct list plutot que tableau et m�thode qui rnevois une liste d'artefacts.
+//todo :  + Coordonnee aleatoire pour aventurier + modifier dans
+//artefact list plutôt que tableau et m�thode qui rnevois une liste d'artefacts.
