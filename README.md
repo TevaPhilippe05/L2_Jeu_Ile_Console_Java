@@ -6,7 +6,7 @@ Il s'agit d'un petit jeu en console réalisé par deux étudiants en L2 CMI info
 ### Pitch du jeu
 ![Début du jeu](README_Assets/Interface_Lancement_Jeu.png)
 
-Vous commencez avec l'interface ci-dessus. Créez vous une équipe avec un Porteur, un Grimpeur et un Explorateur avant de vous lancer dans l'aventure du jeu. Vous devrez alors récupérer le plus d'artéfacts possible en exploitant le fait que les aventurier ont des caractéristiques différentes en fonction de leur type. A vous de les découvrir (sinon référez vous au instruction de l'énoncé (Sujet_Ile_Perdu.html).
+Vous commencez avec l'interface ci-dessus. Créez vous une équipe avec un Porteur, un Grimpeur et un Explorateur avant de vous lancer dans l'aventure du jeu. Vous devrez alors récupérer le plus d'artéfacts possible en exploitant le fait que les aventurier ont des caractéristiques différentes en fonction de leur type. A vous de les découvrir (sinon référez vous au instruction de l'énoncé (**Sujet_Ile_Perdu.html**).
 
 Attention, la montée des eaux vous guette :eyes: !
 
@@ -34,3 +34,7 @@ Note : IntelliJ indique parfois des erreurs autres que sur la librarie. ELle ne 
 ## Crédits
 - PHILIPPE Teva
 - FAUCON Chloé
+
+## Compte rendu
+
+Pour un compte rendu plus précis, référez vous au fichier **Compte_Rendu_TP.docx**
