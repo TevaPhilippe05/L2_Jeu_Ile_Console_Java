@@ -48,10 +48,10 @@ public class Equipe{
 
     public void texteEquipeComplete() {
         if (nbAventurier == 3) {
-            System.out.println("L'�quipe est compl�te");
+            System.out.println("L'equipe est complete");
         }
         else {
-            System.out.println("L'�quipe n'est pas compl�te");
+            System.out.println("L'equipe n'est pas complete");
         }
     }
 

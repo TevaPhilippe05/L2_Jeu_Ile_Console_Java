@@ -63,13 +63,13 @@ public class Main {
     }
 
     public static int renvoisChoix() {
-        System.out.println("Si vous voulez cr�er/ajouter un aventurier, choisissez 1");
-        System.out.println("Si vous voulez afficher l'�quipe, choisissez 2");
+        System.out.println("Si vous voulez creer/ajouter un aventurier, choisissez 1");
+        System.out.println("Si vous voulez afficher l'equipe, choisissez 2");
         System.out.println("Si vous voulez avoir des informations sur un aventurier, choississez 3");
         System.out.println("Si vous voulez enlever un aventurier dans une equipe, choisissez 4");
-        System.out.println("Si vous voulez savoir si l'�quipe est compl�te, choisissez 5");
+        System.out.println("Si vous voulez savoir si l'equipe est complete, choisissez 5");
         System.out.println("Si vous voulez comencer la partie: choisissez 6");
-        System.out.println("Si vous voulez des informations sur les art�facts, choisissez 7");
+        System.out.println("Si vous voulez des informations sur les artefacts, choisissez 7");
         int choix = Keyboard.getInt();
         return choix;
     }
@@ -100,10 +100,10 @@ public class Main {
                     }
                 }
             } else {
-                System.out.println("Ce role est deja pris dans l'�quipe");
+                System.out.println("Ce role est deja pris dans l'equipe");
             }
         } else {
-            System.out.println("L'equipe est d�j� compl�te");
+            System.out.println("L'equipe est deja complete");
         }
     }
 
@@ -148,7 +148,7 @@ public class Main {
     public static String commencerLaPartie(Equipe e, Map map) {
         boolean jouer = true;
         String res = "";
-        if (e.getNbAventurier() == 1) {
+        if (e.getNbAventurier() == 3) {
             while (jouer) {
                 for (Aventurier a : e.aventurier) {
                     if (jouer == false){

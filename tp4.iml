@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Keyboard" level="project" />
+    <orderEntry type="library" name="Keyboard (3)" level="project" />
   </component>
 </module>

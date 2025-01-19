@@ -41,4 +41,4 @@ public class Artefact {
 
 
 //todo :  + Coordonnee aleatoire pour aventurier + modifier dans
-//artefact list plutôt que tableau et m�thode qui rnevois une liste d'artefacts.
+//artefact list plutôt que tableau et methode qui renvois une liste d'artefacts.

@@ -78,7 +78,7 @@ public class Porteur extends Aventurier {
                 }
             }
         } else {
-            System.out.println("Vous vous êtes trompé, votre tour est sauté. Hum. Dommage.  :) ");
+            System.out.println("Vous vous êtes trompé, votre tour est sauté. Hummm. Dommage.  :) ");
         }
         coordonnees = "(" + indice[x] + "," + indice[y] + ")";
 
