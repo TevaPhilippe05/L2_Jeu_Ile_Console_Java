@@ -8,7 +8,7 @@ TODO
 
 ### Diagramme des classes
 
-![Texte alternatif](README_Assets/Diagramme_Classes.png)
+![Diagramme des classes](README_Assets/Diagramme_Classes.png)
 
 ### Les commandes du jeu
 
