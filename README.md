@@ -1,19 +1,24 @@
 # L2_Jeu_Ile_Console_Java -> Projet L2 INFO305
-Il s'agit de TODO
+Il s'agit d'un petit jeu en console réalisé par deux étudiants en L2 CMI informatique afin de répondre à l'un des TP de Java.
 
 ## Le jeu
 
-### Introduction au jeu
-TODO
+### Pitch du jeu
+![Début du jeu](README_Assets/Interface_Lancement_Jeu.png)
 
+Vous commencez avec l'interface ci-dessus. Créez vous une équipe avec un Porteur, un Grimpeur et un Explorateur avant de vous lancer dans l'aventure du jeu. Vous devrez alors récupérer le plus d'artéfacts possible en exploitant le fait que les aventurier ont des caractéristiques différentes en fonction de leur type. A vous de les découvrir (sinon référez vous au instruction de l'énoncé (Sujet_Ile_Perdu.html).
 
-### But du jeu
-
-TODO
+Attention, la montée des eaux vous guette :eyes: !
 
 ### Les commandes du jeu
 
-TODO
+Celles-ci sont très simples : suivez les instruction en console en répondant avec des chiffres !
+
+### Diagramme des classes
+
+![Diagramme des classes](README_Assets/Diagramme_Classes.png)
+
+Voici le diagramme des classes généré avec la version professionnelle de IntelliJ.
 
 ### Installation du jeu
 #### Sur IntelliJ
