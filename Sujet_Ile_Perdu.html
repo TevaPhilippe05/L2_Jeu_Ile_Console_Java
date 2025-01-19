@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0097)https://moodle.univ-smb.fr/pluginfile.php/666446/mod_resource/content/12/TP_LostIsland/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<link rel="icon" type="image/ico" href="https://moodle.univ-smb.fr/pluginfile.php/666446/mod_resource/content/12/TP_LostIsland/favicon.ico">
+	<link rel="stylesheet" media="print" href="./Sujet_Ile_Perdu_files/impression.css">
+	<link rel="stylesheet" media="screen" href="./Sujet_Ile_Perdu_files/mon_style.css">	
+	<title>POO&nbsp;: L'Île perdue</title>
+</head>
+<body>
+<div class="container">
+<div class="header">
+	<h1>
+	TP Programmation Orientée Objet - Java
+	</h1>
+</div>
+
+<div class="left">
+	<p>Liens utiles&nbsp;:<br>
+		<a href="https://docs.oracle.com/javase/8/docs/api/" target="api">Librairies</a><br>
+		<a href="http://java.developpez.com/cours" target="_blank">Tutoriels</a><br>
+		<a href="https://moodle.univ-smb.fr/pluginfile.php/666446/mod_resource/content/12/TP_LostIsland/CodeConventions/CodeConventions.pdf" target="doc">Conventions Java</a>
+		<a href="https://moodle.univ-smb.fr/pluginfile.php/666446/mod_resource/content/12/TP_LostIsland/keyboard/in/keyboard/Keyboard.html" target="api">Classe Keyboard</a><br>
+		<a href="https://moodle.univ-smb.fr/pluginfile.php/666446/mod_resource/content/12/TP_LostIsland/Keyboard.jar">Keyboard.jar</a><br>
+	</p>
+</div>
+
+<div class="content">
+<div style="float:left">
+	<img src="./Sujet_Ile_Perdu_files/image004.png" alt="L&#39;Île perdue" class="noprint">
+</div>
+<h1>
+	TP&nbsp;: L'Île perdue
+</h1>
+<h2>Sujet&nbsp;: </h2>
+<p>
+	La légende raconte que <strong>4 artéfacts</strong> des temps anciens ont été cachés par des 
+	voleurs sur <em>l'île perdue</em>. <br>
+	Ayant pris connaissance de cette légende, vous avez décidé d'élucider cette énigme. <br>
+	Les mois passèrent et, au fur et à mesure de vos travaux, les premières coordonnées de
+	l'île apparurent. Très vite, vous avez vite compris où étaient cachés ces artefacts.
+	Cependant, seul, il allait être impossible d'y parvenir. <br>
+	Vous vous êtes donc chargé de réunir une <strong>équipe</strong> qui était capable d'aller récupérer 
+	ces <strong>4 artéfacts</strong> sur <em>l'île perdue</em>.
+</p>
+<h3 style="clear:both">Données du Problème&nbsp;:</h3>
+<p>À ce jour, l'<strong>équipe</strong> est vide. Il vous faut donc des <strong>aventuriers</strong>. <br>
+	Chaque <strong>aventurier</strong> est identifié de manière unique par un nom.
+	En plus, il a un type, des coordonnées et peut porter <strong>des artéfacts</strong> . <br><br>
+
+	On distingue trois types d'<strong>aventurier</strong>&nbsp;: 
+</p>
+<ul><li>les <em> "explorateurs" </em>, ils peuvent marcher beaucoup plus longtemps que les autres aventuriers.</li>
+
+	<li>les <em> "grimpeurs" </em>, ils sont capable de se déplacer plus facilement dans les hauteurs.</li>
+
+	<li>les <em> "porteurs" </em>, ils sont plus costauds et donc sont plus à l'aise pour porter des choses.</li>
+</ul>
+<p>Les coordonnées seront sous forme de chaine de caractères et seront abordées plus tard...
+</p>
+
+<h2>Chapitre 1&nbsp;: L'équipe se forme</h2>
+<p> Nous vous demandons de proposer <strong>une modélisation</strong> puis 
+	sa réalisation en Java d'un programme qui va gérer l'équipe des aventuriers. 
+	Pour cela, il vous sera nécessaire d'appréhender ce problème 
+	du point de vue de la <strong>Programmation Orientée Objet</strong> (décomposition 
+	du problème	sous la forme de classes et de relations entre les classes).<br>
+
+	Le programme devra, dans ce premier chapitre, comporter 
+	un menu principal, avec les options suivantes&nbsp;:
+</p>
+<ul><li>Créer un aventurier
+		(explorateur, navigateur ou transporteur) puis l'ajouter dans l'équipe 
+		des aventuriers (rappel&nbsp;: chaque aventurier doit pouvoir s'identifier par son nom).
+	</li>
+	<li>Afficher la liste des aventuriers.</li>
+
+	<li>Chercher un aventurier par son nom.</li>
+
+	<li>Enlever un aventurier de l'équipe.</li>
+		
+	<li>Être capable de dire si l'équipe est complète,
+		c'est à dire que l'équipe est composée de 3 aventuriers qui ont chacun l'un des 3 rôles.</li>
+</ul>
+
+<h3>Remarques</h3>
+<ul><li><strong>Bonnes pratiques&nbsp;:</strong> le programme doit être le plus modulaire possible&nbsp;: 
+	<ul><li>Privilégier la décomposition du problème (en introduisant des méthodes et des classes).</li>
+		<li>Le programme principal (méthode "main") se résumera à un nombre limité de lignes. Ecrivez 
+		votre programme toujours en partant du main (approche descendante).</li>
+		<li>Les accès aux différentes <span class="souligne">fonctionnalités</span> du programme se 
+			feront par l'intermédiaire de menus et sous-menus.</li>
+		<li>Privilégiez l'introduction de constantes plutôt que de nombres 
+				dans votre programme. Par exemple, une équipe est composée de 
+				<em>MAX_AVENTURIER</em> au lieu du nombre <em>3</em>.</li>
+	</ul></li>
+	<li>La classe <strong>Keyboard</strong>  vous permet d'effectuer des lectures simples.
+		Vous trouverez une description de <strong>Keyboard</strong> <a href="https://moodle.univ-smb.fr/pluginfile.php/666446/mod_resource/content/12/TP_LostIsland/keyboard/in/keyboard/Keyboard.html" target="api">ici</a>
+		et les sources Java <a href="https://moodle.univ-smb.fr/pluginfile.php/666446/mod_resource/content/12/TP_LostIsland/keyboard-java2html/in/keyboard/Keyboard.java.xhtml" target="sources">ici</a>. <br>
+		Pour utiliser <strong>Keyboard</strong> avec Eclipse vous devez&nbsp;: 
+		<ul><li>télécharger le fichier <a href="https://moodle.univ-smb.fr/pluginfile.php/666446/mod_resource/content/12/TP_LostIsland/Keyboard.jar">Keyboard.jar</a>, puis</li>
+
+		<li>aller dans « propriétés » de votre projet, choisissez « Java Build Path », « Librairies »,
+			« Add External JARs » et indiquer le chemin du fichier « Keyboard.jar ».</li>
+		</ul></li>
+	<li>Pour <strong>stocker une collection </strong>d'objets vous pouvez utiliser
+		par exemple la classe <strong>ArrayList</strong> (java.util.ArrayList&nbsp;; 
+		<a href="https://docs.oracle.com/javase/8/docs/api/index.html?java/util/ArrayList.html" target="api">
+		https://docs.oracle.com/javase/8/docs/api/</a>) telle que vue en cours.</li>
+
+	<li>L'opérateur <em> "objet1 <strong>instanceof</strong> ClasseA" </em> permet de
+		vérifier si <em>objet1</em> est une instance de classe <em>ClasseA</em>.</li>
+	<li>La méthode <em>Math.random() </em>retourne une valeur aléatoire supérieure 
+		ou égale à 0 et strictement inférieure à 1.</li>
+
+</ul>
+
+<h2>Chapitre 2&nbsp;: La création du monde</h2>
+<p>Lors de vos travaux, vous avez mis la main sur une vieille <strong> carte </strong> 
+	qui décrit <em>l'île perdue</em>. Vous avez constaté avec horreur plusieurs subtilités.
+</p>
+<ul><li>À chaque fois que vous preniez connaissance de la <strong> carte </strong> de l'île, celle-ci
+		changeait de forme de manière complètement aléatoire et la disposition des artéfacts avec. <br>
+		Comme si l'île disparaissait pour réapparaitre différemment...
+	</li>
+	<li>Les coordonnées de la <strong> carte </strong> sont représentées de manière particulière. 
+		La latitude est notée de <em> 'A' </em> à <em> 'Z' </em>, alors que la longitude de 
+		<em> 'a' </em> à <em> 'z' </em>. Ainsi, la première case de la <strong> carte </strong> 
+		est appelée <em> Aa </em>, la deuxième <em> Ab </em>...
+	</li>
+	<li>La topographie de la <strong> carte </strong> est remplacée par des chiffres de 
+		<em> 0 </em> à <em> 4 </em>, d'ailleurs le <em> 0 </em> n'est pas affiché. 
+		Plus le nombre est haut, plus l'altitude est élevée.
+	</li>
+	<li>Les <strong>artéfacts</strong> sont en fait cachés sur les cases les plus en hauteur.
+	</li>
+</ul>
+<p>Voici la <strong> carte </strong> de <em>l'île perdue</em> lorsque vous l'avez regardée la dernière fois&nbsp;:
+</p>
+<pre class="carte">    a   b   c   d   e   f   g   h  
+    —   —   —   —   —   —   —   —  
+A |   |   | 3 |   |(4)| 2 | 2 |   |
+    —   —   —   —   —   —   —   —  
+B | 3 | 2 | 1 | 2 | 3 | 2 | 1 | 1 |
+    —   —   —   —   —   —   —   —  
+C | 4 | 1 | 3 | 4 | 3 | 4 | 1 | 2 |
+    —   —   —   —   —   —   —   —  
+D |   |   | 2 | 4 | 3 | 2 | 1 |   |
+    —   —   —   —   —   —   —   —  
+E | 1 |   | 1 | 2 | 3 |(4)| 2 | 1 |
+    —   —   —   —   —   —   —   —  
+F | 1 | 1 |   |   |(4)| 3 | 3 |   |
+    —   —   —   —   —   —   —   —  
+G | 1 | 2 | 3 |   |   | 4 | 2 | 1 |
+    —   —   —   —   —   —   —   —  
+H |   | 3 |   |   |(4)| 4 | 3 | 4 |
+    —   —   —   —   —   —   —   —  
+</pre>
+<p>La <strong> carte </strong> est donc un tableau à 2 dimensions de <strong> cases </strong>.</p>
+<p>Pour vous aider au début, vous pouvez utiliser ces valeurs&nbsp;:</p>
+<pre class="code">{{0,0,3,0,4,2,2,0},{3,2,1,2,3,2,1,1},{4,1,3,4,3,4,1,2},{0,0,2,4,3,2,1,0},{1,0,1,2,3,4,2,1},{1,1,0,0,4,3,3,0},{1,2,3,0,0,4,2,1},{0,3,0,0,4,4,3,4}}
+</pre>
+<p>Il est possible que <em>l'île</em> se transforme. En fait, elle s'enfonce dans l'océan de manière 
+	complètement aléatoire.<br>
+	Dans ce cas, chaque valeur perd "1" en altitude sauf si elle ne valait plus rien.</p>
+<p>Ainsi, si par hasard l'eau venait à monter, on obtiendrait à partir de la carte précédente&nbsp;:</p>
+<pre class="carte">    a   b   c   d   e   f   g   h  
+    —   —   —   —   —   —   —   —  
+A |   |   | 2 |   |(3)| 1 | 1 |   |
+    —   —   —   —   —   —   —   —  
+B | 2 | 1 |   | 1 | 2 | 1 |   |   |
+    —   —   —   —   —   —   —   —  
+C | 3 |   | 2 | 3 | 2 | 3 |   | 1 |
+    —   —   —   —   —   —   —   —  
+D |   |   | 1 | 3 | 2 | 1 |   |   |
+    —   —   —   —   —   —   —   —  
+E |   |   |   | 1 | 2 |(3)| 1 |   |
+    —   —   —   —   —   —   —   —  
+F |   |   |   |   |(3)| 2 | 2 |   |
+    —   —   —   —   —   —   —   —  
+G |   | 1 | 2 |   |   | 3 | 1 |   |
+    —   —   —   —   —   —   —   —  
+H |   | 2 |   |   |(3)| 3 | 2 | 3 |
+    —   —   —   —   —   —   —   —  
+</pre>
+<p>Jusqu'à ne plus avoir de valeur du tout, si l'eau venait à monter 3 fois supplémentaires.</p>
+<p>La carte révèle également l'emplacement des <strong>4 artéfacts</strong> que les aventuriers 
+	doivent récupérer. Ils seront donc automatiquement créés et placés dans le tableau lors de 
+	son initialisation. Un <strong> artéfact </strong> possède&nbsp;: 
+</p>
+<ul><li>un nom (<em> "l'épée d'or" </em>, <em> "le bouclier de platine" </em>, <em> "la lance 
+		d'argent" </em>, <em> "la dague d'émeraude" </em>, etc. ),</li>
+	<li>un poids ( <em>10kg</em>, <em>35kg</em>, <em>8kg</em>, <em>4kg</em>, etc. ),</li>
+	<li>des coordonnées dans la matrice calculée aléatoirement. <br>
+		On rappelle que la latitude est notée de <em> 'A' </em> à <em> 'Z' </em> 
+		et la longitude de <em> 'a' </em> à <em> 'z' </em>.
+	</li>
+</ul>
+<h3>Remarques</h3>
+<p>Le programme devra, dans ce deuxième chapitre, permettre de gérer le tableau à 2 dimensions
+	à travers les <span class="souligne">fonctionnalités</span> suivantes&nbsp;:
+</p>
+<ul>
+	<li>Afficher le tableau. Cet affichage comporte&nbsp;:
+		<ul><li>Un espace cartésien (8 X 8) représentant la carte. On affichera&nbsp;:
+		<ul><li>" " si l'altitude est nulle.</li>
+			<li>"1","2","3" ou "4" en fonction de la hauteur.</li>
+			<li>"E","G" ou "P" si un aventurier est présent (pour <em>Explorateur</em>, 
+				<em>Grimpeur</em> ou <em>Porteur</em>).</li>
+		</ul>
+		</li><li>On notera que <strong>l'artefact</strong> apparait avec des parenthèses sur la carte.</li>
+		</ul></li>
+	
+	<li>Afficher <strong>les artéfacts</strong> avec leur poids, selon leur état de disponibilité.
+		<ul><li>s'il est sur la carte, on donnera ses coordonnées.</li>
+			<li>sinon on précisera qu'il est pris par un aventurier.</li>
+		</ul>
+	Attention =&gt; ne confondez pas l'"affichage" du tableau avec sa "représentation".
+	</li>
+	<li>Afficher les aventuriers qui vont être déposés sur <em>l'île</em>.<br>
+			Avec pour chacun, son nom, son type et ses coordonnées en chaine de caractères.</li>
+</ul>
+
+<h2>Chapitre 3&nbsp;: À l'assaut de <em> l'île perdue </em></h2>
+<p> L'équipe est prête. Le monde est créé. C'est donc l'heure de partir à l'aventure !
+</p>
+<p> Le jeu va se dérouler par tour. Voici le schéma d'un tour&nbsp;:
+</p>
+<ol><li>Le premier aventurier de l'équipe choisit de réaliser son action,
+		<ul><li>se déplacer</li>
+			<li>prendre un <strong>artefact</strong> si celui-ci est présent</li>
+			<li>ne rien faire</li>
+		</ul>
+	</li>
+	<li>Puis, s'en suit le deuxième aventurier de l'équipe sur le même modèle que le premier,</li>
+	<li>Ensuite, le troisème aventurier,</li>
+	<li>Enfin, de manière totalement aléatoire, le niveau de l'eau monte (ou pas)</li>
+</ol>
+<p> On précise les actions des aventuriers&nbsp;:</p>
+<ul><li>S'il choisit de se déplacer, il ne peut aller que sur une case voisine (haut, bas, droite ou gauche)
+	avec un différentiel de "1" en altitude. <br>
+	Par exemple, si l'aventurier est sur une case "2", il peut aller en "1", en "2" ou en "3".
+		<ul><li>Si l'aventurier est un <em> explorateur </em>, il peut se déplacer sur 3 cases voisines 
+		(il peut faire de 1 à 3 déplacements successifs de 1 case par tour)
+				en gardant le même différentiel de "1" en altitude.</li>
+			<li>Si l'aventurier est un <em> grimpeur </em>, il ne peut se déplacer que sur une case
+				voisine, mais avec un différentiel cette fois de "3" en altitude.<br>
+				Par exemple, s'il était sur une case "2", il peut aller partout autour de lui.</li>
+		</ul>
+	</li>
+	<li>S'il choisit de prendre un <strong>artefact</strong>, il ne peut en porter qu'un seul à la fois.
+		<ul><li>Si l'aventurier est un <em> porteur </em>, il peut en porter deux en même temps 
+			(normal, il est plus costaud).</li>
+		</ul>
+	</li>
+</ul>
+<p> L'aventure est terminée lorsque tous <strong>les artefacts</strong> ont été récupérés. Dans ce cas,
+	les aventuriers ont trouvé tous les trésors, c'est un succès !
+</p>
+<p> Malheureusement, il est possible que la recherche <strong>des artefacts</strong> "tombe à l'eau"...
+	L'île ne se laisse pas faire ! On l'a vu, l'eau monte aléatoirement au fil du temps. Donc si cette 
+	recherche <strong>d'artefacts</strong> n'a pas été effectuée à temps, c'est un échec&nbsp;:'(
+</p>
+<h3>Remarques</h3>
+<p> Repartez du menu que vous avez développé lors du premier chapitre. Sur le dernier choix du menu 
+	lorsque l'équipe est prête, ou vous pouvez ajouter un choix supplémentaire, les aventuriers de 
+	l'équipe doivent être placés aléatoirement sur la carte.
+</p>
+<p> Pour mettre en place ce système de tours, vous proposerez via un autre menu contextuel, les
+	actions que les aventuriers doivent suivre. <br>
+	L'aventure s'arrète en fonction de ce qui a été précisé plus haut, soit sur un succès, soit sur 
+	un échec.
+</p>
+
+<h2>Chapitre 4&nbsp;: De l'eau !</h2>
+<p> Comme il est possible que <em>l'île</em> soit complètement immergée, il est important de 
+	préciser que certaines entités dont on a parlé flottent.
+</p>
+<p> Lorsqu'un aventurier ou un <strong>artéfact</strong> se retrouve dans l'eau 
+	(c'est à dire que son altitude est nulle), le fait qu'il flotte ou qu'il coule va 
+	dépendre du poids&nbsp;:
+</p><ul><li>Un <strong>artéfact</strong> coule à partir du moment où son poids fait au moins 10kg.</li>
+	<li>Un aventurier continue de flotter si le ou les <strong>artéfacts</strong> qu'il porte 
+		ont un poids total inférieur à 10kg.</li>
+</ul>
+<p> Bien évidemment, la question ne se pose pas si l'aventurier ou <strong>l'artéfact</strong>
+	est sur terre (son altitude n'est pas nulle...)
+</p>
+<h3>Remarques</h3>
+<p>Pour intégrer cette nouvelle fonctionnalité, vous devez ajouter une interface au projet que vous pouvez 
+	nommer « Flottable ». Elle possède une méthode qui détermine si l'instance qui en découle est 
+	capable de flotter ou non, en fonction de ce qui a été dit plus haut.
+</p>
+<p>À vous de choisir les classes qui l'implémentent. Il faudra bien penser à mettre à jour votre 
+	modélisation de départ si cela a une incidence...
+</p>
+<p>... Ah ! Et bien penser également à peut être changer une partie du code, car cette fonctionnalité a 
+	peut être un impact pour déterminer quand la partie s'arrète.
+</p>
+
+<h2>Chapitre 5&nbsp;: Changement de règles</h2>
+<p>
+	Donnez libre cours à votre imagination pour introduire d'autres éléments sur <em> l'île perdue </em>&nbsp;:
+	un niveau de difficultés, de nouveaux rôles, etc. <br>
+	Implémentez, sur un ou plusieurs exemples, les mécanismes de gestion des exceptions&nbsp;:
+	déclaration, levée et récupération d'une exception.
+</p>
+
+<h2>À rendre</h2>
+<h3>Rendus intermédiaires</h3>
+<p>Immédiatement à la fin de la 3<sup>ème</sup> et 4<sup>ème</sup> séance de TP, vous devez faire un rendu
+	intermédiaire de votre projet. Vous devez rendre les sources de vos classes (un fichier <em>zip</em> ou un fichier<em> jar</em>)
+	sur moodle dans le dépôt de votre groupe de TP. </p>
+	
+<h3>Rendu final</h3>
+<p>Lors de la dernière séance de TP, vous ferez une présentation de votre programme, de l'ordre de 5 minutes, à l'enseignant
+	qui vous encadre.</p>
+<p>
+	Vous devez rendre, en plus des sources (commentées) de votre programme,
+	 un compte-rendu de TP analysant vos choix d'implantation. <br> 
+	 Il contiendra notamment&nbsp;:
+</p>
+<ul>
+	<li>Les noms des membres de votre binône ou de votre monôme.</li>
+	<li>La décomposition en classes sous la forme d'un diagramme de classes UML.</li>
+	<li>Une description des fonctionnalités implantées, difficultés rencontrées, etc.</li>
+	<li>Un jeu d'essais, avec des copies d'écran, montrant le fonctionnement de votre programme.</li>
+</ul>
+<p>La date limite pour rendre votre TP est <strong><span class="souligne">
+	d'une semaine (7 jours) après la dernière séance</span></strong>.<br>
+	Vous devez rendre, sur moodle, un fichier "zipé"
+	dans <span class="souligne">le dépôt de votre groupe de TP</span>.
+</p>	
+<p>Vous travaillerez en monôme ou binôme.<br>
+	Vous devez faire un travail original ! C'est à dire que vous devez faire votre 
+	<strong>propre programme</strong>. Ne copiez pas le code de quelqu'un d'autre !
+</p>
+</div>
+<div class="footer"><h1>TP Java</h1></div>
+</div>
+
+
+</body></html>
