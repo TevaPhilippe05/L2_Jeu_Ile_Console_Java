@@ -1,15 +1,14 @@
 # L2_Jeu_Ile_Console_Java -> Projet L2 INFO305
-Il s'agit de TODO
+Il s'agit d'un petit jeu en console réalisé par deux étudiants en L2 CMI informatique afin de répondre à l'un des TP de Java.
 
 ## Le jeu
 
 ### Introduction au jeu
 TODO
 
+### Diagramme des classes
 
-### But du jeu
-
-TODO
+![Texte alternatif](README_Assets/Diagramme_Classes.png)
 
 ### Les commandes du jeu
 
