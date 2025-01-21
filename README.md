@@ -31,10 +31,10 @@ Vous pouvez maintenant lancer le script à partir du fichier Main.
 
 Note : IntelliJ indique parfois des erreurs autres que sur la librairie. ELle ne sont pas à prendre en compte, il n'y a pas d'erreur en réalité.
 
-## Crédits
-- PHILIPPE Teva
-- FAUCON Chloé
-
 ## Compte rendu
 
 Pour un compte rendu plus précis, référez-vous au fichier **Compte_Rendu_TP.docx**
+
+## Crédits
+- [PHILIPPE Teva](https://github.com/TevaPhilippe05)
+- [FAUCON Chloé](https://github.com/Bulbiii)
